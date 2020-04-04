@@ -53,7 +53,7 @@ func checkepass(w http.ResponseWriter, r *http.Request) {
 			w.Write([]byte(`{"error": "Qr is not valid"}`))
 		}
 	} else {
-		w.WriteHeader(http.StatusOK)
+		w.WriteHeader(http.StatusBadRequest)
 		w.Write([]byte(`{"error": "Authentication unsuccessful"}`))
 	}
 }
