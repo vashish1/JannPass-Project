@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/live_data"
+            android:icon="@drawable/dot"
+            android:title="LIVE DATA"
+            />
+        <item
+            android:id="@+id/genpass"
+            android:icon="@drawable/dot"
+            android:title="Generate Pass" />
+        <item
+            android:id="@+id/no"
+            android:icon="@drawable/dot"
+            android:title="HelpLine No" />
+        <item
+            android:id="@+id/prec"
+            android:icon="@drawable/dot"
+            android:title="Precautions" />
+        <item
+            android:id="@+id/mass"
+            android:icon="@drawable/dot"
+            android:title="Report Mass gathering" />
+        <item
+            android:id="@+id/donation"
+            android:icon="@drawable/dot"
+            android:title="Donation" />
+        <item
+            android:id="@+id/mypass"
+            android:icon="@drawable/dot"
+            android:title="My Pass" />
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/dot"
+            android:title="About" />
+
+
+    </group>
+
+
+</menu>
