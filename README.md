@@ -11,3 +11,28 @@
     •	 Police will have alternate login path.
     •	They will have scanner built in their page which will verify the pass.
 
+
+##  To test the backend:
+    
+    # Download Golang into your system from the given link:
+       
+       https://golang.org/dl/
+    
+    # Setup Go    
+    
+       https://golang.org/doc/install
+       
+    # Clone this repo into your system.
+    
+    # move the "Jann-Pass" folder into your GOPATH
+    
+    # use "go get ..." to download the open source packages.
+    
+    # Use any editor to open the Jann-Pass folder
+    
+    # Using cmd run the following commands:
+    
+       $go build
+       $./Jann-Pass
+       
+     # use Postman to check the API working.  
