@@ -40,16 +40,7 @@
         android:background="@drawable/covag"
         />
 
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="70dp"
-            android:id="@+id/gif2"
-            android:layout_centerHorizontal="true"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:src="@drawable/ld"
-            android:background="@drawable/covag"
-            />
+
 
 
 </LinearLayout>

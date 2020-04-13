@@ -21,20 +21,29 @@ public class police extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_police);
-        uid=(EditText) findViewById(R.id.uid);
+        init();
 
 
 
     }
+    public void init()
+    {
+        uid=(EditText) findViewById(R.id.uidp);
 
+    }
     public void  loginP(View v)
     {
-
+        init();
+        String v2=uid.getText().toString().trim();
+            if(v2.equals("1200"))
+        {
             Intent i = new Intent(getApplicationContext(), scanner.class);
             startActivity(i);
-
-
-           // Toast.makeText(getApplicationContext(),"WRONG UID",Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(), "WRONG UID", Toast.LENGTH_LONG).show();
+        }
 
     }
 

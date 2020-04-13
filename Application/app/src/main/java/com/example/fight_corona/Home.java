@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.card.MaterialCardView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -35,7 +36,7 @@ import static android.content.Context.CONNECTIVITY_SERVICE;
 
 public class Home extends Fragment
 {
-    TextView active,discharge,death,passenger,basic;
+    TextView active,discharge,death,passenger,basic,stated;
     ProgressDialog progressDialog;
 
     MaterialCardView card1,card2,card3,card4;
@@ -51,55 +52,8 @@ public class Home extends Fragment
         card4 = v.findViewById(R.id.card4);
         internet=(TextView) v.findViewById(R.id.internet);
         basic=v.findViewById(R.id.basic);
-        card1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Flubber.with()
-                        .animation(Flubber.AnimationPreset.SHAKE)
-                        .repeatCount(0)
-                        .duration(100)
-                        .createFor(card1)
-                        .start();
+        stated=(TextView) v.findViewById(R.id.stated);
 
-            }
-        });
-
-        card2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Flubber.with()
-                        .animation(Flubber.AnimationPreset.SHAKE)
-                        .repeatCount(0)
-                        .duration(200)
-                        .createFor(card2)
-                        .start();
-            }
-        });
-
-        card3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Flubber.with()
-                        .animation(Flubber.AnimationPreset.SHAKE)
-                        .repeatCount(0)
-                        .duration(200)
-                        .createFor(card3)
-                        .start();
-
-            }
-        });
-
-        card4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Flubber.with()
-                        .animation(Flubber.AnimationPreset.SHAKE)
-                        .repeatCount(0)
-                        .duration(200)
-                        .createFor(card4)
-                        .start();
-            }
-        });
 
         active = (TextView) v.findViewById(R.id.active);
         discharge = (TextView) v.findViewById(R.id.discharge);
@@ -112,6 +66,7 @@ public class Home extends Fragment
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.show();
 
+
         if (!haveNetwork())
         {
             Toast.makeText(getActivity(), "Network connection is not available", Toast.LENGTH_SHORT).show();
@@ -121,6 +76,7 @@ public class Home extends Fragment
         else
         {
             internet.setVisibility(View.GONE);
+            if(savedInstanceState==null)
             new data().execute();
         }
 
@@ -145,12 +101,25 @@ public class Home extends Fragment
             }
         });
 
+        stated.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Fragment fragment1 = new statedata();
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.container, fragment1);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
+
 
 
 
 
         return  v;
     }
+
 
 
 

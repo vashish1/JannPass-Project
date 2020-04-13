@@ -8,6 +8,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
+    <string name="appname">COVID-19</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_tools">Tools</string>
@@ -19,4 +20,7 @@
     <string name="title_activity_police">police</string>
     <string name="title_activity_policemain">policemain</string>
     <string name="title_activity_scanner">scanner</string>
+    <string name="title_activity_about">about</string>
+    <string name="title_activity_checktool">checktool</string>
+    <string name="title_activity_statedata">statedata</string>
 </resources>

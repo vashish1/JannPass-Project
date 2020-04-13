@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,60 +24,21 @@ public class helpline extends Fragment
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.helpline,container,false);
-        cardView1=(CardView) v.findViewById(R.id.nation);
-        toll=(CardView) v.findViewById(R.id.toll);
-        up=(CardView)v.findViewById(R.id.up);
-        cardView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "911123978046", null));
-                startActivity(intent);
-            }
-        });
 
-        toll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "1075", null));
-                startActivity(intent);
-            }
-        });
 
-        up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "1800313444222", null));
-                startActivity(intent);
-            }
-        });
 
-    animation();
+        modelp[] items=new modelp[2];
+      items[0]=new modelp("UTTAR PRADESH","9149367771");
+      items[1]=new modelp("UTTRAKHAND","9997304104");
+        Myaddapter adapter = new Myaddapter(items);
+
+        RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.rv);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(adapter);
+
+
 
         return v;
-    }
-
-    public  void animation()
-    {
-        Flubber.with()
-                .animation(Flubber.AnimationPreset.FADE_IN_RIGHT)
-                .repeatCount(0)
-                .duration(1500)
-                .createFor(cardView1)
-                .start();
-
-        Flubber.with()
-                .animation(Flubber.AnimationPreset.FADE_IN_LEFT)
-                .repeatCount(0)
-                .duration(1500)
-                .createFor(toll)
-                .start();
-
-        Flubber.with()
-                .animation(Flubber.AnimationPreset.FADE_IN_RIGHT)
-                .repeatCount(0)
-                .duration(1500)
-                .createFor(up)
-                .start();
-
     }
 }

@@ -71,11 +71,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="30dp">
-                    <EditText android:id="@+id/uid"
+                    <EditText android:id="@+id/uidp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
                         android:hint="UID"
+
                         />
                 </android.support.design.widget.TextInputLayout>
 
@@ -101,8 +102,6 @@
                         android:background="#ff00f0"
                         android:textSize="20dp"
                         android:text="LOG IN AS POLICE"/>
-
-
                 </android.support.design.card.MaterialCardView>
 
 
@@ -117,9 +116,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Sign In as CITIZEN"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="50dp"
                     android:gravity="center"
                     android:textSize="16dip"
+                    android:textColor="#000000"
                     android:onClick="frst"/>
 
             </LinearLayout>

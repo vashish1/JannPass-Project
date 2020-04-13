@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="E-PASS GENERATOR"
+                android:text="REPORT MASS GATHERING"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:textSize="20dp"
@@ -51,23 +51,23 @@
                     >
 
                     <EditText
-                        android:id="@+id/adhr"
+                        android:id="@+id/namem"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15dp"
-                        android:hint="Aadhar Number"
+                        android:hint="Your name"
                         android:inputType="textEmailAddress" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                   >
-                    <EditText android:id="@+id/cty"
+                    >
+                    <EditText android:id="@+id/aadhnom"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"
-                        android:hint="City"
+                        android:hint="Your aadhar no"
                         android:textSize="15dp"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -80,14 +80,33 @@
 
 
 
-                        <EditText
-                            android:id="@+id/dte"
-                            android:textSize="15dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:inputType="text"
-                            android:hint="Date"/>
+                    <EditText
+                        android:id="@+id/pin"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:hint="Pin code of place"/>
+
+
+
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+
+
+                    <EditText
+                        android:id="@+id/placem"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:hint="Address"/>
 
 
 
@@ -100,14 +119,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="50dp"
-                   >
+                    >
                     <EditText
-                        android:id="@+id/tymslt"
+                        android:id="@+id/details"
                         android:textSize="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"
-                        android:hint="Time Slot"/>
+                        android:hint="Other details"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.card.MaterialCardView
@@ -122,37 +141,28 @@
                     app:cardBackgroundColor="#ff00f0"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="2dp">
-
-
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="15dp"
-                        android:id="@+id/btn"
+                        android:id="@+id/report"
                         android:layout_marginRight="15dp"
                         android:visibility="visible"
                         android:background="#ff00f0"
                         android:textSize="20dp"
-                        android:text="Generate Pass"/>
+                        android:text="REPORT "/>
 
 
                 </android.support.design.card.MaterialCardView>
 
 
                 <ProgressBar
-                    android:id="@+id/pbrgen"
+                    android:id="@+id/pbLoading"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"/>
 
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_gravity="center"
-                    android:id="@+id/iv"/>
 
 
 

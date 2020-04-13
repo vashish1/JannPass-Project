@@ -8,14 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class donation extends Fragment
-
+public class concept extends Fragment
 {
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v=inflater.inflate(R.layout.donation,container,false);
-        return v;
+        View v=inflater.inflate(R.layout.concept,container,false);
+        return  v;
     }
 }
